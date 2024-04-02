@@ -1,0 +1,258 @@
+
+.userBtn {
+    background: url(../img/btns/userBtnOff.png) center/100% 100% no-repeat;
+    padding: 5.2vw 13vw;
+    margin-top: 0vw;
+    margin-left: -27vw;
+}
+
+.userBtn.active {
+    background: url(../img/btns/userBtnOn.png) center/100% 100% no-repeat;
+    padding: 5.2vw 13vw;
+    /* margin-left: -7vw; */
+    margin-top: 0vw;
+}
+
+.fortuneBtn {
+    background: url(../img/btns/fortuneBtnOff.png) center/100% 100% no-repeat;
+    padding: 4vw 13vw;
+    margin-top: 2vw;
+}
+
+.fortuneBtn.active {
+    background: url(../img/btns/fortuneBtnOn.png) center/100% 100% no-repeat;
+    padding: 5.2vw 13vw;
+    margin-top: 0vw;
+}
+
+.talentBtn {
+    background: url(../img/btns/talentBtnOff.png) center/100% 100% no-repeat;
+    padding: 5.2vw 13vw;
+    margin-top: 0vw;
+    margin-right: -27vw;
+}
+
+.talentBtn.active {
+    background: url(../img/btns/talentBtnOn.png) center/100% 100% no-repeat;
+    padding: 5.2vw 13vw;
+    margin-top: 0vw;
+}
+
+.giftBtn {
+    position: absolute;
+    width: 14vw;
+    left: 0vw;
+    top: -3vw;
+}
+
+.chanceBtn {
+    padding: 4vw 0vw;
+    background: url(../img/btns/chanceUnSelect.png) center/100% 100% no-repeat;
+    color: #949494;
+    font-family: 'Poppins-Bold';
+    font-size: 3vw;
+    width: 12vw;
+}
+
+.chanceBtn.active {
+    background: url(../img/btns/chanceSelect.png) center/100% 100% no-repeat;
+    color: #ffffff;
+}
+
+.spinBtn {
+    width: 14vw;
+    position: absolute;
+    left: 0;
+    right: 93px;
+    bottom: 30vw;
+    margin: auto;
+    bottom: 58vw;
+}
+.spinBtn2 {
+    width: 14vw;
+    position: absolute;
+    /* left: 196px; */
+    right: 90px;
+    bottom: 30vw;
+    margin: auto;
+    bottom: 58vw;
+}
+.overallBtn1,
+.overallBtn2 {
+    background: url(../img/btns/overallBtnOff.png) center/100% 100% no-repeat;
+    padding: 5vw 14vw;
+}
+
+.overallBtn1.active,
+.overallBtn2.active {
+    background: url(../img/btns/overallBtnOn.png) center/100% 100% no-repeat;
+    margin-left: -2vw;
+}
+
+.hourlyBtn1,
+.hourlyBtn2 {
+    background: url(../img/btns/hourlyBtnOff.png) center/100% 100% no-repeat;
+    padding: 5vw 14vw;
+}
+.dailyBtn1.active,
+.dailyBtn2.active {
+    background: url(../img/btns/dailybtn1On.png) center/100% 100% no-repeat;
+}
+.dailyBtn1,
+.dailyBtn2 {
+    background: url(../img/btns/dailyBtnOff.png) center/100% 100% no-repeat;
+    padding: 5vw 12vw;
+}
+.hourlyBtn1.active,
+.hourlyBtn2.active {
+    background: url(../img/btns/hourlyBtnOn.png) center/100% 100% no-repeat;
+    /* width: 100%; */
+}
+
+.currentBtn1.active,.currentdailytBtn1.active ,.currentBtn12.active{
+    background: url(../img/btns/currentBtnOn.png) center/100% 100% no-repeat;
+    padding: 5vw 0vw;
+    width: 99%;
+    margin-left: 0vw;
+    margin-top: 0vw;
+}
+
+.previousBtn1.active,.previousDailyBtn1.active ,.previousBtn12.active {
+    background: url(../img/btns/previousBtnOn.png) center/100% 100% no-repeat;
+    padding: 5vw 0vw;
+    width: 100%;
+    margin-top: 0vw;
+}
+
+.currentBtn1 {
+    padding: 5vw 0vw;
+    /* background: url(../img/btns/currentBtnOff.png); */
+    background-size: 100% 100%;
+}
+
+.previousBtn1 {
+    padding: 5vw 0vw;
+    /* background: url(../img/btns/previousBtnOff.png); */
+    background-size: 100% 100%;
+}
+
+.currentdailytBtn1 {
+    padding: 5vw 0vw;
+}
+
+.previousBtn12 {
+    padding: 5vw 0vw;
+    /* background: url(../img/btns/previousBtnOff.png); */
+    background-size: 100% 100%;
+}
+
+.currentdailytBtn1 {
+    padding: 5vw 0vw;
+    /* background: url(../img/btns/currentBtnOff.png); */
+    background-size: 100% 100%;
+}
+
+.previousDailyBtn1 {
+    padding: 5vw 0vw;
+    /* background: url(../img/btns/previousBtnOff.png); */
+    background-size: 100% 100%;
+}
+
+
+.currentBtn12 {
+    padding: 5vw 0vw;
+}
+
+.moreBtn {
+    width: 19vw;
+    margin-bottom: 7vw;
+    }
+
+.redTeamBtn {
+    background: url(../img/btns/redTeamOff.png) center/100% 100% no-repeat;
+    padding: 6vw 0vw;
+    width: 40vw;
+}
+
+.redTeamBtn.active {
+    background: url(../img/btns/redTeamOn.png) center/100% 100% no-repeat;
+}
+
+.blueTeamBtn {
+    background: url(../img/btns/blueTeamOff.png) center/100% 100% no-repeat;
+    padding: 6vw 0vw;
+    width: 40vw;
+}
+
+.blueTeamBtn.active {
+    background: url(../img/btns/blueTeamOn.png) center/100% 100% no-repeat;
+}
+
+.upBtn {
+    width: 8vw;
+    position: absolute;
+    bottom: 0vw;
+    right: 2vw;
+    z-index: 10;
+}
+
+.guideBtn {
+    width: 20vw;
+    position: fixed;
+    right: 0vw;
+    top: 46vw;
+    z-index: 20;
+}
+
+.spinTheMAchineBtn,
+.fortunePlayBtn {
+    padding: 5vw 0vw;
+}
+
+.spinTheMAchineBtn.active {
+    background: url(../img/btns/spinTheMachineBtn.png) center/100% 100% no-repeat;
+}
+
+.fortunePlayBtn.active {
+    background: url(../img/btns/fortunePlayBtn.png) center/100% 100% no-repeat;
+}
+.rewhisbtn{
+    width: 23vw;
+    position: absolute;
+    right: -1vw;
+    top: 5vw;
+    z-index: 1;
+}
+.rewhis-btn{
+    background: url(../img/btns/timebg.png);
+    background-size: 100% 100%;
+    font-size: 3vw;
+    color: gold;
+    margin-bottom: 2vw;
+    padding: 2vw;
+    width: 90%;
+}
+.tab3btn{
+        /* background: url(../img/backgrounds/tab3btnbg.png); */
+        background-size: 100% 100%;
+}
+.prebtn{
+    position: relative;
+    top: -20vw;
+    left: 21vw;
+}
+.nxtbtn{
+    position: relative;
+    top: -19.5vw;
+    right: 20vw;
+}
+.nxtbtntab2{
+        position: relative;
+        top: -21.5vw;
+        right: 22vw;
+}
+.prebtntab2{
+        position: relative;
+        top: -22vw;
+        left: 27vw;
+}

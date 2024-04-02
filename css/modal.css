@@ -1,0 +1,120 @@
+.modal {
+    position: fixed;
+    z-index: 100;
+    padding-top: 5vw;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content,
+.oopmodal-content,
+.congomodal-content {
+    margin: auto;
+    width: 100%;
+    /* height: 142vw; */
+    /* overflow-y: auto; */
+    margin-top: 38vw;
+    position: relative;
+}
+
+.oopmodal-content,
+.congomodal-content {/* height: 60vh; */}
+
+.guideMainBg {
+    background: url(../img/backgrounds/leaderboardAndGuideBg.png) center/100% 100% no-repeat;
+    padding: 5vw 0vw 9vw;
+    margin: auto;
+    height: 120vw;
+       line-height: 1.9;
+}
+.guideMainBgInside{
+       height: 109vw;
+       margin-top: 8vw;
+       overflow-y: auto;
+}
+
+.guideHeading {
+    width: 55vw;
+    margin: auto;
+    margin-top: -5vw;
+}
+
+.guideBtnsBg {
+    background: url(../img/backgrounds/fortunePlaySpinBg.png) center/100% 100% no-repeat;
+    margin: auto;
+}
+
+.guideConentCon {
+    height: 60vh;
+    overflow: scroll;
+line-height: 1.7;width: 90%;}
+
+.oppsContent {
+    background: url(../img/backgrounds/oopsbg.png) center/100% 100% no-repeat;
+    padding: 1vw 0vw 6vw;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.oppsHeading,
+.congoHeading {
+    width: 25vw;
+}
+
+.congoContent {
+    background: url(../img/backgrounds/congoPopupBg.png) center/100% 100% no-repeat;
+    padding: 0vw 0vw 16vw;
+    margin: auto;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.rewardsPopCon {
+    height: 60vh;
+    overflow: scroll;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td,
+th {
+    /* border: 1px solid #dddddd; */
+    text-align: left;
+    padding: 8px;
+    
+
+}
+tr{
+    /* border-bottom: 1px solid; */
+}
+/*tr:nth-child(12) {
+  border-bottom:  none;
+}*/
+.bl{
+    /* border-right: 1px solid; */
+    text-align: center;
+    line-height: 1vw;
+    font-size: 3vw;
+}
+.yaytxt{
+        position: relative;
+    top: -9vw;
+}
+.congotxt{
+        position: relative;
+        top: -15vw;
+        padding: 2vw;
+}
