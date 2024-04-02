@@ -7,27 +7,27 @@ var local = 0;
 var userId = 0;
 var uid = 0;
 var u_token;
-var beanPotValue=0;
-var beanPotValue1=0;
-var beanPotValueTotal=0;
+var beanPotValue = 0;
+var beanPotValue1 = 0;
+var beanPotValueTotal = 0;
 
 var beanPotValuePrevious;
 var fortunePOT;
 
 
-$(document).ready(function() {
+$(document).ready(function () {
     // showModal('congoModal');
-  
-  // uid=502184261;
-  //        pageInfo(local);
+
+    // uid=502184261;
+    //        pageInfo(local);
 
     if (local == 0) {
         try {
             // get user info
-            window.phone.getUserInfo(function(userInfo) {
+            window.phone.getUserInfo(function (userInfo) {
                 // console.log(userInfo.userId)
-               uid = userInfo.userId > 0 ? userInfo.userId : 0;
-               userId = userInfo.userId > 0 ? userInfo.userId : 0;
+                uid = userInfo.userId > 0 ? userInfo.userId : 0;
+                userId = userInfo.userId > 0 ? userInfo.userId : 0;
                 u_token = (userInfo.token != '') ? userInfo.token : null;
                 pageInfo(local);
 
@@ -46,16 +46,16 @@ $(document).ready(function() {
         pageInfo(local)
     }
 
-    
-    $(".langs>div>button").each(function(index) {
-        $(this).on("click", function() {
+
+    $(".langs>div>button").each(function (index) {
+        $(this).on("click", function () {
             $('#lngtxt').html('<span>' + $(this).text().trim() + '</span>');
             contentNext($(this).attr('data-id'));
             $('.langs').hide();
         });
     });
 
-    $('#lngmainbtn').on("click", function() {
+    $('#lngmainbtn').on("click", function () {
         if ($('.langs').is(":hidden")) {
             $('.langs').show();
         } else {
@@ -63,7 +63,7 @@ $(document).ready(function() {
         }
     });
 
-   
+
 
     getUserPreviousDaily(local);
 
@@ -74,7 +74,7 @@ $(document).ready(function() {
 
 
 
-  
+
 
 
     talentDailyCurrent(local);
@@ -86,27 +86,27 @@ $(document).ready(function() {
 
 
 
-function loadless(){
-     document.getElementById('rewtable').style.maxHeight = '84vw';
-        $('.loadbtn').attr("src", "./img/btns/loadmore.png");
-        loadbtn = 0;
+function loadless() {
+    document.getElementById('rewtable').style.maxHeight = '84vw';
+    $('.loadbtn').attr("src", "./img/btns/loadmore.png");
+    loadbtn = 0;
 }
 var loadbtn = 0;
-function loadmore(){
+function loadmore() {
     if (loadbtn == 0) {
-      document.getElementById('rewtable').style.maxHeight = '100%';
+        document.getElementById('rewtable').style.maxHeight = '100%';
         $('.loadbtn').attr("src", "./img/btns/lessBtn.png");
         loadbtn = 1;
-    }else if (loadbtn == 1) {
+    } else if (loadbtn == 1) {
         document.getElementById('rewtable').style.maxHeight = '84vw';
         $('.loadbtn').attr("src", "./img/btns/loadmore.png");
         loadbtn = 0;
     }
-  
+
 }
 
-function switchbtn(btn,btnOn,tab,tabID){
- // var btns = document.getElementsByClassName(btnsClass);
+function switchbtn(btn, btnOn, tab, tabID) {
+    // var btns = document.getElementsByClassName(btnsClass);
     // for (var i = 0; i < tabs.length; i++) {
     //     tabs[i].classList.remove(tabActiveClass);
     // }
@@ -115,30 +115,30 @@ function switchbtn(btn,btnOn,tab,tabID){
 
     // }
     $('#hourlyBtn').attr('src', './img/btns/hourlyBtnOff.png');
-    $('#dailyBtn').attr('src','./img/btns/dailyBtnOff.png');
+    $('#dailyBtn').attr('src', './img/btns/dailyBtnOff.png');
     $('#overallBtn').attr('src', './img/btns/overallBtnOff.png');
-    $('#'+btnOn).attr('src', './img/btns/'+btnOn+'On.png');
+    $('#' + btnOn).attr('src', './img/btns/' + btnOn + 'On.png');
     // $('#'+btnOff).attr('src', './img/btns/'+btnOff+'Off.png');
-   //  var tabs = document.getElementsByClassName(tab);
-   // for (var i = 0; i < tabs.length; i++){
-   //      tabs[i].style.display = none;
-   //  }
-   if (tabID == 1) {
-    $('#beanstab1').show(); // Shows
-    $('#beanstab2').hide();
-    $('#beanstab3').hide();
+    //  var tabs = document.getElementsByClassName(tab);
+    // for (var i = 0; i < tabs.length; i++){
+    //      tabs[i].style.display = none;
+    //  }
+    if (tabID == 1) {
+        $('#beanstab1').show(); // Shows
+        $('#beanstab2').hide();
+        $('#beanstab3').hide();
 
-   }else if (tabID == 2) {
-     $('#beanstab2').show(); // Shows
-    $('#beanstab1').hide();
-    $('#beanstab3').hide();
+    } else if (tabID == 2) {
+        $('#beanstab2').show(); // Shows
+        $('#beanstab1').hide();
+        $('#beanstab3').hide();
 
-   }else if (tabID == 3) {
-     $('#beanstab3').show(); // Shows
-    $('#beanstab1').hide();
-    $('#beanstab2').hide();
+    } else if (tabID == 3) {
+        $('#beanstab3').show(); // Shows
+        $('#beanstab1').hide();
+        $('#beanstab2').hide();
 
-   }
+    }
 
 }
 function tabBtnsClick(btn, btnsClass, activeClass, tab, tabClass, tabActiveClass, extraBtn, extraBtn2) {
@@ -146,19 +146,19 @@ function tabBtnsClick(btn, btnsClass, activeClass, tab, tabClass, tabActiveClass
     var tabs = document.getElementsByClassName(tabClass);
 
     console.log(tab)
-    if(tab=="talentTab"){
-     
-$('#topMainTab').show();
-$('#topmarq').hide();
+    if (tab == "talentTab") {
 
-$('#talentmarq').show();
+        $('#topMainTab').show();
+        $('#topmarq').hide();
+
+        $('#talentmarq').show();
 
     }
-    if(tab=="userTab"){
+    if (tab == "userTab") {
         $('#topMainTab').show();
         $('#topmarq').show();
 
-$('#talentmarq').hide();
+        $('#talentmarq').hide();
 
     }
     // alert(tab);
@@ -172,12 +172,12 @@ $('#talentmarq').hide();
     if (extraBtn) {
         try {
             document.getElementById(extraBtn).click();
-        } catch (e) {}
+        } catch (e) { }
     }
     if (extraBtn2) {
         try {
             document.getElementById(extraBtn2).click();
-        } catch (e) {}
+        } catch (e) { }
     }
     btn.classList.add(activeClass);
 }
@@ -191,48 +191,48 @@ function activeGameBtns(btn, btnsClass, activeClass) {
 }
 
 function playGameNow(id) {
-    console.log("thus"+$('#myGameChances').val())
+    console.log("thus" + $('#myGameChances').val())
 
-     if (parseInt($('#myGameChances').val()) ==0) {
-       $('#ops2TxtContent').html('Please spend 25k more beans to earn a chance. Start Playing to win beans and other accessories.');
+    if (parseInt($('#myGameChances').val()) == 0) {
+        $('#ops2TxtContent').html('Please spend 25k more beans to earn a chance. Start Playing to win beans and other accessories.');
         showModal('oppsModal2');
-       
-    } 
 
-   else if (parseInt($('#myGameChances').val()) =="") {
+    }
+
+    else if (parseInt($('#myGameChances').val()) == "") {
         $('#ops2TxtContent').html('Please enter some value other than 0');
         showModal('oppsModal2');
-     
-    } 
 
-   else if(parseInt($('#myGameChances').val()) ==""  && parseInt(myChancesVal, 10)==0 ){
+    }
 
-       $('#ops2TxtContent').html('Please spend 25k more beans to earn a chance. Start Playing to win beans and other accessories.');
+    else if (parseInt($('#myGameChances').val()) == "" && parseInt(myChancesVal, 10) == 0) {
+
+        $('#ops2TxtContent').html('Please spend 25k more beans to earn a chance. Start Playing to win beans and other accessories.');
         showModal('oppsModal2');
-       
 
-     }
-      else if(parseInt($('#myGameChances').val()) ==0  && parseInt(myChancesVal, 10)==0 ){
 
-       $('#ops2TxtContent').html('Please spend 25k more beans to earn a chance. Start Playing to win beans and other accessories.');
+    }
+    else if (parseInt($('#myGameChances').val()) == 0 && parseInt(myChancesVal, 10) == 0) {
+
+        $('#ops2TxtContent').html('Please spend 25k more beans to earn a chance. Start Playing to win beans and other accessories.');
         showModal('oppsModal2');
-          
 
-     }
+
+    }
 
     else if (parseInt($('#myGameChances').val()) <= 0) {
         $('#ops2TxtContent').html('Please spend 25k more beans to earn a chance to flip the cards. Start Playing to win exciting rewards.');
         showModal('oppsModal2');
-       
+
     } else {
-        playGameNowApi($('#myGameChances').val(),id);
+        playGameNowApi($('#myGameChances').val(), id);
     }
 }
 
 function showModal(id) {
     document.getElementById(id).style.display = 'block';
     $('body').addClass('overlay');
-     
+
 }
 
 function hideModal(id) {
@@ -240,44 +240,44 @@ function hideModal(id) {
 
     document.getElementById(id).style.display = 'none';
     $('body').removeClass('overlay');
-    if(id=="rewardsModal"){
-         document.getElementById('topCon').scrollIntoView();
+    if (id == "rewardsModal") {
+        document.getElementById('topCon').scrollIntoView();
         $(window).scrollTop($('#topCon').offset().top);
 
     }
 
-    else  if(id=="congoModal"){
-         document.getElementById('topCon').scrollIntoView();
+    else if (id == "congoModal") {
+        document.getElementById('topCon').scrollIntoView();
         $(window).scrollTop($('#topCon').offset().top);
 
     }
-    else  if(id=="rewardshisModal"){
-         document.getElementById('myChances').scrollIntoView();
+    else if (id == "rewardshisModal") {
+        document.getElementById('myChances').scrollIntoView();
         $(window).scrollTop($('#myChances').offset().top);
 
     }
 
-     $('#cbtn1').prop('disabled', false);
-         $('#cbtn2').prop('disabled', false);
+    $('#cbtn1').prop('disabled', false);
+    $('#cbtn2').prop('disabled', false);
 
 }
 
 function hideModal2(id) {
     document.getElementById(id).style.display = 'none';
     $('body').removeClass('overlay');
-     if(id=="rewardsModal"){
-         document.getElementById('topCon').scrollIntoView();
+    if (id == "rewardsModal") {
+        document.getElementById('topCon').scrollIntoView();
         $(window).scrollTop($('#topCon').offset().top);
 
 
     }
-      else  if(id=="congoModal"){
-         document.getElementById('topCon').scrollIntoView();
+    else if (id == "congoModal") {
+        document.getElementById('topCon').scrollIntoView();
         $(window).scrollTop($('#topCon').offset().top);
 
     }
-     $('#cbtn1').prop('disabled', false);
-         $('#cbtn2').prop('disabled', false);
+    $('#cbtn1').prop('disabled', false);
+    $('#cbtn2').prop('disabled', false);
 }
 
 var timer = null;
@@ -286,8 +286,8 @@ function moveSlide(action, slideClass, totalSlides, dotsClass) {
 
 
 
-     clearTimeout(timer);
-    $("." + slideClass).each(function(index, element) {
+    clearTimeout(timer);
+    $("." + slideClass).each(function (index, element) {
         if (action === 'nxt') {
 
             if ($(element).hasClass('active')) {
@@ -326,15 +326,15 @@ function moveSlide(action, slideClass, totalSlides, dotsClass) {
 
 }
 
-setInterval(function() { moveSlide('nxt', 'firstSlide2', 5, 'dots3'); }, 3000);
+setInterval(function () { moveSlide('nxt', 'firstSlide2', 5, 'dots3'); }, 3000);
 
-setInterval(function() { moveSlide('nxt', 'thirdSlide1', 3, 'dots1'); }, 3000);
+setInterval(function () { moveSlide('nxt', 'thirdSlide1', 3, 'dots1'); }, 3000);
 
-setInterval(function() { moveSlide('nxt', 'firstSlide3', 5, 'dots5'); }, 3000);
+setInterval(function () { moveSlide('nxt', 'firstSlide3', 5, 'dots5'); }, 3000);
 
-setInterval(function() { moveSlide('nxt', 'firstSlide1', 5, 'dots4'); }, 3000);
+setInterval(function () { moveSlide('nxt', 'firstSlide1', 5, 'dots4'); }, 3000);
 
-setInterval(function() { moveSlide('nxt', 'firstSlide4', 3, 'dots2'); }, 3000);
+setInterval(function () { moveSlide('nxt', 'firstSlide4', 3, 'dots2'); }, 3000);
 
 
 function scrollUp() {
@@ -367,12 +367,12 @@ function stringlength(id, maxlength) {
     } else if (user_ent >= 99 && maxlength >= user_ent) {
         $('#myGameChances').val(99);
 
-    } 
+    }
 
-    else if(user_ent<1){
+    else if (user_ent < 1) {
         //alert('midd')
 
-   $('#myGameChances').val();
+        $('#myGameChances').val();
 
     }
 
@@ -381,46 +381,46 @@ function stringlength(id, maxlength) {
         // alert("stopp case")
         $('#myGameChances').val(0);
 
-       // document.getElementById(id).value = 0;
+        // document.getElementById(id).value = 0;
     }
 
 }
 
 
 
- function stringlengthUser() {
-     let user_ent = parseInt($('#myGameChances').val());
-     let maxlength = parseInt($('#myChances').text());
-    
-if(user_ent<=99){
-if(user_ent>maxlength){
- $('#myGameChances').val(maxlength);
+function stringlengthUser() {
+    let user_ent = parseInt($('#myGameChances').val());
+    let maxlength = parseInt($('#myChances').text());
+
+    if (user_ent <= 99) {
+        if (user_ent > maxlength) {
+            $('#myGameChances').val(maxlength);
+        }
+        else {
+
+        }
+    }
+    else if (user_ent >= 99 && maxlength >= user_ent) {
+        $('#myGameChances').val(99);
+
+    }
+    else {
+        // alert("stopp case")
+        $('#myGameChances').val("");
+
+        //document.getElementById(id).value='';
+    }
+
+
 }
-else {
 
+
+function play_audio(task) {
+    if (task == 'play') {
+        $(".my_audio").trigger('play');
+    }
+    if (task == 'stop') {
+        $(".my_audio").trigger('pause');
+        $(".my_audio").prop("currentTime", 0);
+    }
 }
-}
-else if(user_ent>=99  &&  maxlength>=user_ent){
- $('#myGameChances').val(99);
-
-}
-else{
- // alert("stopp case")
-   $('#myGameChances').val("");
-
-   //document.getElementById(id).value='';
-}
-
-
- }
-
-
- function play_audio(task) {
-      if(task == 'play'){
-           $(".my_audio").trigger('play');
-      }
-      if(task == 'stop'){
-           $(".my_audio").trigger('pause');
-           $(".my_audio").prop("currentTime",0);
-      }
- }
