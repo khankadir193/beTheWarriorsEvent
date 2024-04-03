@@ -1,4 +1,4 @@
-var local = 0;
+var local = 1;
 // local == 0 server
 // local == 1 local machine
 
@@ -24,18 +24,19 @@ $(document).ready(function () {
     if (local == 0) {
         try {
             // get user info
-            window.phone.getUserInfo(function (userInfo) {
+            // window.phone.getUserInfo(function (userInfo) {
                 // console.log(userInfo.userId)
-                uid = userInfo.userId > 0 ? userInfo.userId : 0;
-                userId = userInfo.userId > 0 ? userInfo.userId : 0;
-                u_token = (userInfo.token != '') ? userInfo.token : null;
+                // uid = userInfo.userId > 0 ? userInfo.userId : 0;
+                // userId = userInfo.userId > 0 ? userInfo.userId : 0;
+                // u_token = (userInfo.token != '') ? userInfo.token : null;
+                
                 pageInfo(local);
 
 
                 // showToast(userId);
                 // alert(userId + ' UID: ' + uid);
                 // queryData();
-            });
+            // });
         } catch (_error) {
             console.error("Can't get userInfo by window.phone.getUserInfo");
             // showToast("error ");
@@ -46,6 +47,37 @@ $(document).ready(function () {
         pageInfo(local)
     }
 
+    // if (local == 0) {
+    //     try {
+    //         // Check if window.phone and window.phone.getUserInfo are defined
+    //         if (window.phone && typeof window.phone.getUserInfo === 'function') {
+    //             // Call getUserInfo with a callback function
+    //             window.phone.getUserInfo(function(userInfo) {
+    //                 // Check if userInfo is valid
+    //                 if (userInfo && typeof userInfo === 'object') {
+    //                     // Extract user information
+    //                     uid = userInfo.userId > 0 ? userInfo.userId : 0;
+    //                     userId = userInfo.userId > 0 ? userInfo.userId : 0;
+    //                     u_token = userInfo.token ? userInfo.token : null;
+    //                 }
+    //                 // Call pageInfo function
+    //                 pageInfo(local);
+    //             });
+    //         } else {
+    //             // Handle the case when window.phone or getUserInfo is not available
+    //             console.error("Can't get userInfo: window.phone or getUserInfo function is not available");
+    //             // Show toast or handle the error in some way
+    //         }
+    //     } catch (error) {
+    //         // Handle any exceptions that occur during execution
+    //         console.error("Error while getting userInfo:", error);
+    //         // Show toast or handle the error in some way
+    //     }
+    // } else {
+    //     // Call pageInfo function with the local parameter
+    //     pageInfo(local);
+    // }
+    
 
     $(".langs>div>button").each(function (index) {
         $(this).on("click", function () {
