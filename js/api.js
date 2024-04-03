@@ -50,57 +50,38 @@ var kk_tv_url = "http://www.kktv1.com/m/?roomid=";
 var gamegifTime = 1500;
 
 function pageInfo(local) {
-    if (local == 1) {
+    if (local === 1) {
         $.ajax({
             type: 'GET',
-            async: true,
-            url: infoApi + '?userId=' + uid,
+            url: infoApi,
+            data: {
+                userId: uid
+            },
             cache: false,
-            error: function (xhr, ajaxOptions, thrownError) {
-                // alert(xhr.responseText);
-            },
-            xhr: function () {
-                var xhr = new window.XMLHttpRequest();
-                //Download progress
-                xhr.addEventListener("progress", function (evt) {
-                    //console.log(evt.lengthComputable);
-                    if (evt.lengthComputable) {
-                        // console.log("Downloading contents.");
-                    }
-                }, false);
-                return xhr;
-            },
             beforeSend: function () {
-                // $('#img_bulk_anim_1').attr('src', 'img/bx_loader.gif');
-            },
-            complete: function () {
-                // $('#img_bulk_anim_1').removeAttr('src');
+                // Add any pre-request actions here
             },
             success: function (data) {
-                // $('#responseArrayPage').html(JSON.stringify(data) + ' Tokken: ' + u_token + ' userId: ' + uid);
-                if (data.errorCode == 0) {
+                if (data && data.errorCode === 0) {
                     pageInfoPopulate(data);
-
-                }
-                else {
+                } else {
                     $('#ops2TxtContent').html(data.msg);
-
-
                     showModal('oppsModal2');
-
-
                 }
-
-
             },
-            failure: function () {
-                // console.log('Ajax Failure.');
+            error: function (xhr, status, error) {
+                console.error('Error occurred during AJAX request:', error);
+                // Handle the error or show an alert message here
+            },
+            complete: function () {
+                // Add any post-request actions here
             }
         });
     } else {
         pageInfoPopulate(infoData);
     }
 }
+
 
 function pageInfoPopulate(data) {
 
