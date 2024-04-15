@@ -9,39 +9,39 @@ var rankingData = [{ "userId": 555000045, "userScore": 2, "nickName": "test045",
 var infoApi = host + "/api/activity/recordV1/getUserEventInfo";
 var gameApi = host + "/api/activity/pin/drawGame";
 
-var userOverallApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=1&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
+var userOverallApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=1&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
 
-var talentOverallApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=2&rankType=1&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
-
-
+var talentOverallApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=2&rankType=1&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
 
 
 
-var userCurrentApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=3&isBefore=false&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
-var userPreviousApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=3&isBefore=true&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
 
 
-var talentCurrentApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=2&rankType=3&isBefore=false&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
-var talentPreviousApi = host + "/api/activity/eventShow/getModulePushRankV4?rankIndex=2&rankType=3&isBefore=true&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
+var userCurrentApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=3&isBefore=false&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
+var userPreviousApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=3&isBefore=true&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
+
+
+var talentCurrentApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=2&rankType=3&isBefore=false&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
+var talentPreviousApi = host + "/api/activity/eventShow/getModulePushRankV4?rankIndex=2&rankType=3&isBefore=true&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
 
 
 
 //User daily
-var userDailyCurrent = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=4&isBefore=false&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
-var userPreviousDailyApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=4&isBefore=true&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
+var userDailyCurrent = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=4&isBefore=false&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
+var userPreviousDailyApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=1&rankType=4&isBefore=true&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
 
 //Talent Daily
 
-var talentDailyCurrentApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=2&rankType=4&isBefore=false&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
-var taleNTdailyprEvious = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=2&rankType=4&isBefore=true&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
+var talentDailyCurrentApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=2&rankType=4&isBefore=false&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
+var taleNTdailyprEvious = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=2&rankType=4&isBefore=true&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
 
 
-var winnerApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=7&rankType=2&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
+var winnerApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=7&rankType=2&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
 
-var pkWinnerApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=8&rankType=2&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
+var pkWinnerApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=8&rankType=2&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
 
 
-var winnerRankApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=3&rankType=2&pageIndex=1&pageCount=20&eventDesc=20230501_winner";
+var winnerRankApi = host + "/api/activity/eventShow/getModulePushRankV3?rankIndex=3&rankType=2&pageIndex=1&pageCount=20&eventDesc=20240501_warrior";
 
 var rewardsRecordurl = host + '/api/activity/pin/getUserRewardHis?userId=';
 var userlevel = '../common/img/ulv/';
